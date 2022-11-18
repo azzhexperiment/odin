@@ -4,8 +4,8 @@ import Book from "../Book/Book";
 class Library extends Component {
   book;
 
-  handleAddBookToLibrary(props, title, author, description, pages) {
-    this.book = new Book(props, title, author, description, pages);
+  handleAddBookToLibrary(title, author, description, pages) {
+    this.book = new Book(title, author, description, pages);
   }
 
   render() {

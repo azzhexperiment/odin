@@ -5,6 +5,19 @@ import Book from "./Book/Book";
 
 // use state to update Library content
 
+const toggleAddNewBookForm = () => {
+  // add form here
+  // onsubmit, invoke handleAddBook
+};
+
+// probably need to useState
+
+const handleAddBook = (event, title, author, description, pages) => {
+  event.preventDefault();
+  let library = new Library();
+  library.handleAddBookToLibrary(title, author, description, pages);
+};
+
 function App() {
   return (
     <div className="App">
@@ -27,7 +40,7 @@ function App() {
           />
         </Library>
 
-        <Button type="submit" action={Library.handleAddBookToLibrary}>
+        <Button type="submit" action={toggleAddNewBookForm}>
           Add new book
         </Button>
       </main>
