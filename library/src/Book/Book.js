@@ -1,31 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
+import Card from "../Card/Card";
+
 import "./Book.css";
 
-class Book extends Component {
-  constructor(
-    props,
-    title,
-    author = "Unknown",
-    description = "This book has no description.",
-    pages = "Unknown"
-  ) {
-    super(props);
-    this.title = title;
-    this.author = author;
-    this.description = description;
-    this.pages = pages;
-  }
-
-  render() {
-    return (
-      <div className="card book">
-        <p className="title">{this.props.title}</p>
-        <p className="author">{this.props.author}</p>
-        <p className="pages">{this.props.pages} pages</p>
-        <p className="description">{this.props.description}</p>
-      </div>
-    );
-  }
+function Book(props) {
+  return (
+    <Card className="book">
+      <div className="title">{props.title}</div>
+      <div className="author">{props.author}</div>
+      <div className="description">{props.description}</div>
+      <div className="pages">{props.pages}</div>
+    </Card>
+  );
 }
 
 export default Book;
