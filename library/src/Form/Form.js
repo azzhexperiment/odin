@@ -3,22 +3,12 @@ import Card from "../Card/Card";
 
 import "./Form.css";
 
-const Form = () => {
-  //   this.setState({
-  //     visibility: false,
-  //   });
-
-  //   let formClass = "card form ";
-
-  //   if (this.state.visibility) {
-  //     formClass += "visible";
-  //   } else {
-  //     formClass = "card form ";
-  //   }
-
+function AddNewBookForm() {
   return (
     <Card className="form">
       <h3>Add book</h3>
+
+      {/* add a close icon with action=closeCard */}
 
       <input id="input-title"></input>
       <label htmlFor="input-title">Title</label>
@@ -35,6 +25,6 @@ const Form = () => {
       <Button action={console.log("")}>Add</Button>
     </Card>
   );
-};
+}
 
-export default Form;
+export default AddNewBookForm;
